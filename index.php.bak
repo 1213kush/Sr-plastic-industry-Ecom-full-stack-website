@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+<?php include 'include/head.php'; ?>
+
+<body>
+<?php include 'include/header.php'; ?>
+<!-- Banner Section -->
+<section class="hero">
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="2000">
+    <div class="carousel-inner">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="overlay"></div>
+        <img src="assets\images\banner\WhatsApp Image 2025-04-06 at 13.55.12_37daded9.jpg" class="d-block w-100" alt="High-Quality Plastic Products">
+        <div class="carousel-caption caption-top">
+          <h2 class="animate__animated animate__fadeInDown">Leading Supplier of High-Quality Plastic Products</h2>
+          <p class="animate__animated animate__fadeInUp">Durable and eco-friendly solutions for all industries.</p>
+          <a href="products.php" class="btn btn-primary">Explore Products</a>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="overlay"></div>
+        <img src="assets\images\banner\1ksFoJq6t4Qou0b8Mm6izig.png" class="d-block w-100" alt="Sustainable Plastic Solutions">
+        <div class="carousel-caption caption-top">
+          <h2 class="animate__animated animate__fadeInDown">PVC Pipes that make safe of your homes and industry</h2>
+          <p class="animate__animated animate__fadeInUp">Sustainability with advanced production technology.</p>
+          <a href="products.php" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <div class="overlay"></div>
+        <img src="assets\images\product1\PVC Reducer.jpg" class="d-block w-100" alt="Trusted Plastic Manufacturer">
+        <div class="carousel-caption caption-top">
+          <h2 class="animate__animated animate__fadeInDown">Your Trusted Partner for Reliable Plastic Products</h2>
+          <p class="animate__animated animate__fadeInUp">Quality and precision for your plastic needs.</p>
+          <a href="products.php" class="btn btn-primary">Get in Touch</a>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="carousel-item">
+        <div class="overlay"></div>
+        <img src="assets\images\product1\PVC Elbow.jpg" class="d-block w-100" alt="Affordable Solutions">
+        <div class="carousel-caption caption-top">
+          <h2 class="animate__animated animate__fadeInDown">Affordable & Custom Plastic Solutions</h2>
+          <p class="animate__animated animate__fadeInUp">Tailored designs for every requirement</p>
+          <a href="products.php" class="btn btn-primary">Customize Now</a>
+        </div>
+      </div>
+
+      <!-- Slide 5 -->
+      <div class="carousel-item">
+        <div class="overlay"></div>
+        <img src="assets\images\product1\sustainability-12-10378-g001.png" class="d-block w-100" alt="Premium Plastic">
+        <div class="carousel-caption caption-top">
+          <h2 class="animate__animated animate__fadeInDown">Premium Grade Plastic for Every Industry</h2>
+          <p class="animate__animated animate__fadeInUp">Trusted by top manufacturers globally.</p>
+          <a href="products.php" class="btn btn-primary">See Solutions</a>
+        </div>
+      </div>
+
+      <!-- Slide 6 -->
+      <div class="carousel-item">
+        <div class="overlay"></div>
+        <img src="assets\images\product1\india-injection-molded-plastic-market.png" class="d-block w-100" alt="Innovative Engineering">
+        <div class="carousel-caption caption-top">
+          <h2 class="animate__animated animate__fadeInDown">Engineering Innovation Through Plastic</h2>
+          <p class="animate__animated animate__fadeInUp">Innovative tech for modern demands.</p>
+          <a href="products.php" class="btn btn-primary">Innovate With Us</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <style>
+    .hero {
+      position: relative;
+    }
+
+    .carousel-caption.caption-top {
+      top: 30%;
+      transform: translateY(-50%);
+      bottom: auto;
+    }
+
+    .carousel-caption h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    }
+
+    .carousel-caption p {
+      font-size: 1.2rem;
+      color: #f1f1f1;
+      margin: 10px 0 20px;
+    }
+
+    .carousel-caption a.btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 30px;
+      background-color: #ff3366;
+      border: none;
+    }
+
+    .carousel-caption a.btn:hover {
+      background-color: #e30052;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.4);
+      z-index: 1;
+    }
+
+    .carousel-item img {
+      object-fit: cover;
+      height: 100vh;
+    }
+
+    .carousel-caption {
+      z-index: 2;
+    }
+
+    @media (max-width: 768px) {
+      .carousel-caption h2 {
+        font-size: 1.5rem;
+      }
+
+      .carousel-caption p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+
+  <!-- Animation CDN and Carousel Indicators -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <script>
+    // Initialize animations when slides change
+    document.addEventListener('DOMContentLoaded', function() {
+      const carousel = document.getElementById('carouselExampleFade');
+      carousel.addEventListener('slid.bs.carousel', function() {
+        const activeItem = this.querySelector('.carousel-item.active');
+        const heading = activeItem.querySelector('h2');
+        const text = activeItem.querySelector('p');
+        
+        // Reset animations
+        heading.classList.remove('animate__animated', 'animate__fadeInDown');
+        text.classList.remove('animate__animated', 'animate__fadeInUp');
+        
+        // Trigger reflow
+        void heading.offsetWidth;
+        void text.offsetWidth;
+        
+        // Re-add animations
+        heading.classList.add('animate__animated', 'animate__fadeInDown');
+        text.classList.add('animate__animated', 'animate__fadeInUp');
+      });
+    });
+  </script>
+  
+  <!-- Carousel Indicators -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2"></button>
+    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="3"></button>
+    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="4"></button>
+    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="5"></button>
+  </div>
+</section>
+
+<style>
+  .carousel-indicators {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    margin: 0;
+  }
+  .carousel-indicators button {
+    width: 30px;
+    height: 6px;
+    border-radius: 3px;
+    margin: 0 5px;
+    background-color: rgba(255,255,255,0.5);
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transform: perspective(100px) rotateX(20deg);
+  }
+  .carousel-indicators button.active {
+    background-color: #fff;
+    transform: perspective(100px) rotateX(20deg) scaleX(1.5);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  }
+  .carousel-indicators button:hover {
+    background-color: rgba(255,255,255,0.8);
+    transform: perspective(100px) rotateX(20deg) scaleX(1.2);
+  }
+</style>
+
+<!-- Featured Products Section -->
+<section class="featured-products py-5" id="featured-products">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="font-weight-bold" style="color: #e63946; font-size: 2.5rem; text-transform: uppercase;">Our Products</h2>
+            <div class="separator mx-auto"></div>
+            <p class="lead text-muted">High-quality plastic solutions for all your needs</p>
+        </div>
+        
+        <div class="row product-row">
+            <!-- Product 1 -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="product-card">
+                    <div class="product-badge">Premium</div>
+                    <div class="product-tumb">
+                        <img src="assets/images/banner/WhatsApp Image 2025-04-06 at 13.55.12_37daded9.jpg" alt="SR Polyplast">
+                    </div>
+                    <div class="product-details">
+                        <h4><a href="#">SR Polyplast</a></h4>
+                        <p>High-quality plastic materials for industrial and household applications.</p>
+                        <div class="product-bottom-details">
+                            <a href="#" class="btn btn-enquire" data-bs-toggle="modal" data-bs-target="#bookingModal" data-product="SR Polyplast">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="product-card">
+                    <div class="product-badge bestseller">Best Seller</div>
+                    <div class="product-tumb">
+                        <img src="assets/images/product1/images12.jpg" alt="PVC Storage Container">
+                    </div>
+                    <div class="product-details">
+                        <h4><a href="#">PVC Storage Container</a></h4>
+                        <p>Durable Plastic Storage Container with all size.</p>
+                        <div class="product-bottom-details">
+                            <a href="#" class="btn btn-enquire" data-bs-toggle="modal" data-bs-target="#bookingModal" data-product="PVC Storage Container">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="product-card">
+                    <div class="product-tumb">
+                        <img src="assets/images/product1/1000_F_283565027_ALGECoEsC8nlPUcZv0wbqFLFCNust9ht.jpg" alt="Plastic Cup">
+                    </div>
+                    <div class="product-details">
+                        <h4><a href="#">Plastic Cup</a></h4>
+                        <p>Versatile plastic Cup with Eco-Friendly solution</p>
+                        <div class="product-bottom-details">
+                            <a href="#" class="btn btn-enquire" data-bs-toggle="modal" data-bs-target="#bookingModal" data-product="Plastic Cup">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 4 -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="product-card">
+                    <div class="product-badge">Eco</div>
+                    <div class="product-tumb">
+                        <img src="assets/images/product1/png-transparent-disposable-cup-plastic-plate-manufacturing-plate-glass-furniture-plate.png" alt="Recycled Products">
+                    </div>
+                    <div class="product-details">
+                        <h4><a href="#">Recycled Products</a></h4>
+                        <p>Environmentally friendly recycled plastic products.</p>
+                        <div class="product-bottom-details">
+                            <a href="#" class="btn btn-enquire" data-bs-toggle="modal" data-bs-target="#bookingModal" data-product="Recycled Products">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="products.php" class="btn btn-primary btn-lg">View All Products</a>
+        </div>
+    </div>
+</section>
+
+<!-- Product Card Styles -->
+<style>
+    .separator {
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(to right, #457b9d, #1d3557);
+        margin: 0 auto 20px;
+    }
+
+    .product-card {
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        background: #fff;
+        border-radius: 12px;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        height: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .product-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .product-tumb {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 200px;
+        padding: 20px;
+        background: #f8f9fa;
+    }
+
+    .product-tumb img {
+        max-width: 100%;
+        max-height: 150px;
+        transition: all 0.5s ease;
+    }
+
+    .product-card:hover .product-tumb img {
+        transform: scale(1.1);
+    }
+
+    .product-details {
+        padding: 20px;
+    }
+
+    .product-details h4 {
+        font-weight: 600;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        color: #1d3557;
+        font-size: 1.1rem;
+    }
+
+    .product-details p {
+        font-size: 0.9rem;
+        color: #6c757d;
+        line-height: 1.4;
+        margin-bottom: 20px;
+        min-height: 60px;
+    }
+
+    .product-bottom-details {
+        border-top: 1px solid #eee;
+        padding-top: 15px;
+        text-align: center;
+    }
+
+    .btn-enquire {
+        background-color: rgb(29, 53, 87);
+        color: white;
+        padding: 12px 35px;
+        border-radius: 50px;
+        font-size: 1rem;
+        transition: all 0.3s;
+        border: 2px solid transparent;
+        font-weight: 600;
+    }
+
+    .btn-enquire:hover {
+        background-color: rgb(230, 57, 70);
+        color: white;
+        transform: translateY(-3px) scale(1.1);
+        border-color: rgb(29, 53, 87);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    /* Product Badges */
+    .product-badge {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: #e63946;
+        color: white;
+        padding: 5px 10px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        border-radius: 20px;
+        z-index: 1;
+    }
+
+    .product-badge.bestseller {
+        background: #1d3557;
+    }
+
+    .product-badge.new {
+        background: #457b9d;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 992px) {
+        .product-details p {
+            min-height: auto;
+        }
+    }
+</style>
+
+<!-- CSS Styles for Product Section -->
+<style>
+    /* Separator Style */
+    .separator {
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(to right, #457b9d, #1d3557);
+        margin-bottom: 20px;
+    }
+    
+    /* Product Card Styles */
+    .product-card {
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        background: #fff;
+        border-radius: 12px;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        height: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    
+    .product-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+    
+    .product-tumb {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 200px;
+        padding: 20px;
+        background: #f8f9fa;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .product-tumb img {
+        max-width: 100%;
+        max-height: 150px;
+        transition: all 0.5s ease;
+    }
+    
+    .product-card:hover .product-tumb img {
+        transform: scale(1.1);
+    }
+    
+    .product-details {
+        padding: 20px;
+    }
+    
+    .product-details h4 {
+        font-weight: 600;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        color: #1d3557;
+        font-size: 1.1rem;
+    }
+    
+    .product-details h4 a {
+        text-decoration: none;
+        color: inherit;
+        transition: color 0.3s ease;
+    }
+    
+    .product-details h4 a:hover {
+        color: #e63946;
+    }
+    
+    .product-details p {
+        font-size: 0.9rem;
+        color: #6c757d;
+        line-height: 1.4;
+        margin-bottom: 20px;
+        min-height: 60px;
+    }
+    
+    .product-bottom-details {
+        border-top: 1px solid #eee;
+        padding-top: 15px;
+    }
+    
+    .product-price {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #1d3557;
+    }
+    
+    .product-price .old-price {
+        color: #999;
+        font-weight: 400;
+        text-decoration: line-through;
+        margin-right: 5px;
+        font-size: 0.9rem;
+    }
+    
+    .product-links a {
+        font-size: 1.2rem;
+        color: #457b9d;
+        margin-left: 10px;
+        transition: all 0.3s ease;
+    }
+    
+    .product-links a:hover {
+        color: #e63946;
+    }
+    
+    /* Product Badge Styles */
+    .product-badge {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: #e63946;
+        color: white;
+        padding: 5px 10px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        border-radius: 20px;
+        z-index: 1;
+        letter-spacing: 1px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .product-badge.sale {
+        background: #e63946;
+    }
+    
+    .product-badge.new {
+        background: #457b9d;
+    }
+    
+    .product-badge.bestseller {
+        background: #1d3557;
+    }
+    
+    /* Hover Effect - Overlay */
+    .product-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(29, 53, 87, 0) 0%, rgba(29, 53, 87, 0.8) 100%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+        z-index: 1;
+    }
+    
+    .product-card:hover::before {
+        opacity: 0.2;
+    }
+    
+    /* Button Styles */
+    .btn-primary {
+        background-color: #1d3557;
+        border-color: #1d3557;
+        transition: all 0.3s ease;
+        font-weight: 600;
+    }
+    
+    .btn-primary:hover {
+        background-color: #e63946;
+        border-color: #e63946;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+    }
+    
+    /* Animation for Products on Load */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .product-row .col-lg-3 {
+        animation: fadeInUp 0.5s ease forwards;
+        opacity: 0;
+    }
+    
+    .product-row .col-lg-3:nth-child(1) { animation-delay: 0.1s; }
+    .product-row .col-lg-3:nth-child(2) { animation-delay: 0.2s; }
+    .product-row .col-lg-3:nth-child(3) { animation-delay: 0.3s; }
+    .product-row .col-lg-3:nth-child(4) { animation-delay: 0.4s; }
+    .product-row .col-lg-3:nth-child(5) { animation-delay: 0.5s; }
+    .product-row .col-lg-3:nth-child(6) { animation-delay: 0.6s; }
+    .product-row .col-lg-3:nth-child(7) { animation-delay: 0.7s; }
+    .product-row .col-lg-3:nth-child(8) { animation-delay: 0.8s; }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 992px) {
+        .product-details p {
+            min-height: auto;
+        }
+    }
+</style>
+
+<!-- Optional JavaScript for Enhanced Effects -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add hover class when mouse enters the product card
+        const productCards = document.querySelectorAll('.product-card');
+        
+        productCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.classList.add('product-hover');
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.classList.remove('product-hover');
+            });
+        });
+        
+        // Initialize AOS animation library if available
+        if (typeof AOS !== 'undefined') {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-out-cubic',
+                once: true
+            });
+        }
+    });
+</script>
+<!-- Product Section End -->
+
+<!-- =================================== -->
+<?php include 'leader.php'; ?>
+
+ <!-- =================================== -->
+ <style>
+    .feature-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: #f8f9fa;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        font-size: 24px;
+        margin: 0 auto 10px;
+    }
+
+    .feature-icon:hover {
+        background-color: #007bff; /* Blue color on hover */
+        color: white;
+    }
+</style>
+
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="container text-center">
+                <hr />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="py-3 text-center">
+                    <div class="feature-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h4>Fast Delivery</h4>
+                    <p>We deliver products within 24 hours. No long queues or waiting times.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="py-3 text-center">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Quality Guarantee</h4>
+                    <p>We provide a 100% satisfaction guarantee. No hassle, no worries.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="py-3 text-center">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h4>Customer Satisfaction</h4>
+                    <p>We're here to help you find the best plastic solutions.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="py-3 text-center">
+                    <div class="feature-icon">
+                        <i class="fas fa-money-check-alt"></i>
+                    </div>
+                    <h4>Affordable Pricing</h4>
+                    <p>We're committed to offering the best deals at competitive prices.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ <!--====================================-->
+
+<?php include 'testimonials.php'; ?>
+<!-- =================================== -->
+
+<!-- =================================== -->
+<?php include 'faq.php'; ?>
+<!-- =================================== -->
+<div class="container text-center">
+    <h1 class="font-weight-bold h3 mb-4" style="color: darkred;">Our Brand Partners</h1>
+    <hr />
+
+    <!-- Main Flexbox Container -->
+    <div class="d-flex align-items-center justify-content-center flex-wrap">
+
+        <!-- Left Side: Text Content -->
+        <div class="text-container text-md-start text-center pe-md-4">
+            <h4 class="fw-bold" style="color: darkblue;">Why Partner With Us?</h4>
+            <p style="color: grey; max-width: 300px;">
+                SR Plastic collaborates with top brands to provide innovative, high-quality solutions. Join our network
+                of trusted partners and grow together.
+            </p>
+        </div>
+
+        <!-- Middle: Vertical Blue Line -->
+        <div class="vertical-line d-none d-md-block"></div>
+
+        <!-- Right Side: Partner Logos in a Slick Slider -->
+        <section class="customer-logos slider mt-3">
+           <img src="assets/images/products/product2.jpg" alt="">
+           <img src="assets/images/products/product2.jpg" alt="">
+
+           <img src="assets/images/products/product2.jpg" alt="">
+
+              <img src="assets/images/products/product2.jpg" alt="">
+                <img src="assets/images/products/product2.jpg" alt="">
+                <img src="assets/images/products/product2.jpg" alt="">
+                <img src="assets/images/products/product2.jpg" alt="">
+                <img src="assets/images/products/product2.jpg" alt="">
+                <img src="assets/images/products/product2.jpg" alt="">
+                <img src="assets/images/products/product2.jpg" alt="">
+        </section>
+    </div>
+</div>
+
+<!-- Custom CSS for Styling -->
+<style>
+    .d-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .text-container {
+        width: 30%;
+        min-width: 250px;
+    }
+
+    .vertical-line {
+        width: 3px;
+        height: 100px;
+        background-color: blue;
+        margin: 0 20px;
+    }
+
+    .customer-logos {
+        width: 40%;
+    }
+
+    .customer-logos .slide img {
+        max-width: 150px;
+        height: auto;
+        display: block;
+        margin: auto;
+    }
+
+    .slick-slide {
+        margin: 0px 15px;
+    }
+
+    @media (max-width: 768px) {
+        .d-flex {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .vertical-line {
+            width: 80%;
+            height: 3px;
+            margin: 20px 0;
+        }
+
+        .customer-logos {
+            width: 100%;
+        }
+    }
+</style>
+
+<!-- Include jQuery & Slick Carousel -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+
+<!-- Initialize Slick Slider -->
+<script>
+    $(document).ready(function () {
+        $(".customer-logos").slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1500,
+            arrows: false,
+            pauseOnHover: false,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+    });
+</script>
+
+<!--====================================-->
+
+
+<!--=====================================================================--->
+<style>
+    .booking-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 250px 20px;
+        color: black;
+        border-radius: 10px;
+    }
+
+    .booking-section h1 {
+        margin-bottom: 15px;
+        font-size: 36px;
+        font-weight: bold;
+    }
+
+    .booking-section p {
+        font-size: 18px;
+        max-width: 600px;
+    }
+
+    .booking-btn {
+        margin-top: 20px;
+        padding: 12px 25px;
+        font-size: 20px;
+        font-weight: bold;
+        background: rgb(19, 46, 73);
+        color: rgb(245, 247, 251);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .booking-btn:hover {
+        background: rgb(19, 46, 73);
+        color: #0a58ca;
+
+        .social-icons a {
+            color: blue;
+            /* Set icon color to blue */
+            transition: color 0.3s ease-in-out;
+            /* Smooth transition effect */
+        }
+
+        .social-icons a:hover {
+            color: darkblue;
+            /* Slightly darker blue on hover */
+        }
+    }
+</style>
+</head>
+<section class="booking-section">
+    <div class="container text-center">
+        <h1 class="font-weight-bold h3 mb-4" style="color: darkred;">Book Your Service Today</h1>
+        <hr>
+        <p class="container text-center">
+            Experience the best quality plastic solutions. Click below to book an appointment with us.
+        </p>
+        <button class="btn btn-warning border rounded-pill bg-warning bg-gradient text-dark px-5 mb-3"
+            data-bs-toggle="modal" data-bs-target="#bookingModal">
+            Get Started
+        </button>
+        <div class="social-icons mt-3">
+            <a href="#"><i class="fab fa-facebook fa-2x mx-2" style="color: blue;"></i></a>
+            <a href="#"><i class="fab fa-google fa-2x mx-2" style="color: blue;"></i></a>
+            <a href="#"><i class="fab fa-twitter fa-2x mx-2" style="color: blue;"></i></a>
+
+        </div>
+    </div>
+
+</section>
+
+
+<!-- Modal for Booking Form -->
+<div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="bookingModalLabel">Book Your Service</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            <form id="bookingForm" action="submit_booking.php" method="POST" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label for="name" class="form-label">Full Name</label>
+        <input type="text" class="form-control" name="name" required>
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email Address</label>
+        <input type="email" class="form-control" name="email" required>
+    </div>
+    <div class="mb-3">
+        <label for="service" class="form-label">Select Service</label>
+        <select class="form-select" name="service" required>
+            <option value="">Choose a Service</option>
+            <option value="custom-molding">Custom Plastic Molding</option>
+            <option value="packaging">Plastic Packaging Solutions</option>
+            <option value="containers">Plastic Containers Manufacturing</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="message" class="form-label">Your Message</label>
+        <textarea class="form-control" name="message" rows="3" required></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="file" class="form-label">Upload a Photo (Optional)</label>
+        <input type="file" class="form-control" name="file">
+    </div>
+    <button type="submit" class="btn btn-primary w-100">Submit Booking</button>
+</form>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+<!-- ================================== -->
+<?php include 'include/footer.php'; ?>
+<!-- ==================================== -->
+
+</body>
+<script>
+    (function () {
+        'use strict'
+
+        var forms = document.querySelectorAll('.needs-validation');
+
+        Array.prototype.slice.call(forms).forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+
+                    // Scroll to the first invalid element
+                    var firstInvalid = form.querySelector(':invalid');
+                    if (firstInvalid) {
+                        firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                }
+
+                form.classList.add('was-validated');
+            }, false);
+        });
+    })();
+</script>
+</html>

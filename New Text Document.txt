@@ -1,0 +1,547 @@
+<!-- ENHANCED FOOTER WITH DARK/LIGHT MODE TOGGLE -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-d0vZ+C2n4M61FyxW8UpXUQUzG5MkI4eXD9A4dQ4TxMQX95DZ9yA2Z3RyJraWTRrIC2uIuK4V7OeKX8HgE0c1Ug==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+    :root {
+        --primary-bg: #1b262c;
+        --secondary-bg: #0f4c75;
+        --accent-gradient: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
+        --text-color: rgba(255, 255, 255, 0.8);
+        --title-color: #fff;
+        --border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    [data-theme="light"] {
+        --primary-bg: #ffffff;
+        --secondary-bg: #f0f0f0;
+        --accent-gradient: linear-gradient(90deg, #00bcd4 0%, #9c27b0 100%);
+        --text-color: #333;
+        --title-color: #111;
+        --border-color: rgba(0, 0, 0, 0.1);
+    }
+
+    /* Fix for full width footer */
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .footer-section {
+        background: var(--primary-bg);
+        color: var(--text-color);
+        padding: 30px 0;
+        font-size: 15px;
+        position: relative;
+        overflow: hidden;
+        width: 100vw;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+        left: 0;
+        right: 0;
+    }
+
+        .container {
+        width: 100%;
+        max-width: none;
+        padding:  0 0px;
+    }
+
+    .footer-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: var(--accent-gradient);
+    }
+
+    .footer-section h4 {
+        color: var(--title-color);
+        font-weight: 700;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+    }
+
+    .footer-section h4::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 50px;
+        height: 2px;
+        background: var(--accent-gradient);
+    }
+
+    .footer-section ul {
+        padding: 0;
+        list-style: none;
+        margin: 0;
+    }
+
+    .footer-section ul li {
+        margin-bottom: 10px;
+        padding-left: 20px;
+        position: relative;
+    }
+
+    .footer-section ul li::before {
+        content: '?';
+        position: absolute;
+        left: 0;
+        color:rgb(36, 156, 193);
+    }
+
+    .footer-section a {
+        color: var(--text-color);
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .footer-section a:hover {
+        color: var(--title-color);
+        padding-left: 5px;
+    }
+
+    .newsletter-form {
+        display: flex;
+        margin-top: 20px;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .newsletter-form input {
+        flex: 1;
+        padding: 10px;
+        border: none;
+        border-radius: 4px 0 0 4px;
+        width: 100%;
+    }
+
+    .newsletter-form button {
+        background: var(--accent-gradient);
+        color: white;
+        border: none;
+        padding: 0 15px;
+        border-radius: 0 4px 4px 0;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .social-media-icons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .social-media-icons a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        background: rgba(255,255,255,0.15);
+        border-radius: 50%;
+        color: var(--title-color);
+        transition: all 0.3s ease;
+        font-size: 18px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .social-media-icons a:hover {
+        background: var(--accent-gradient);
+        transform: translateY(-3px) scale(1.1);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+    .footer-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 40px auto;
+        width: 100%;
+    }
+
+    .footer-logo img {
+        max-width: 220px;
+        filter: brightness(0) invert(1);
+        display: block;
+        margin: 0 auto;
+    }
+
+    .footer-bottom {
+        background: var(--secondary-bg);
+        height: 100px;
+        padding: 20px 0;
+        text-align: center;
+        position: relative;
+        width: 100vw;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .footer-bottom::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        height: 1px;
+        background: var(--border-color);
+    }
+
+    .toggle-mode {
+        position: absolute;
+        top: 15px;
+        right: 30px; /* Increased from 15px */
+        background: var(--accent-gradient);
+        border: none;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background 0.3s;
+        z-index: 10;
+    }
+
+    .toggle-mode:hover {
+        opacity: 0.9;
+    }
+
+    /* Row and column layout fixes */
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: 25px;
+        margin-left: 25px;
+        width: 100%;
+    }
+    
+    .col-lg-4, .col-md-6, .col-md-12 {
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        box-sizing: border-box;
+    }
+    
+    @media (min-width: 768px) {
+        .col-md-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        .col-md-12 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+    
+    @media (min-width: 992px) {
+        .col-lg-4 {
+            flex: 0 0 33.333333%;
+            max-width: 33.333333%;
+        }
+    }
+
+    .mb-4 {
+        margin-bottom: 1.5rem;
+    }
+
+    .mt-3 {
+        margin-top: 1rem;
+    }
+
+    .d-flex {
+        display: flex;
+    }
+
+    .justify-content-center {
+        justify-content: center;
+    }
+
+    .gap-3 {
+        gap: 1rem;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+        .footer-section {
+            padding: 20px 0;
+        }
+
+        .container {
+            padding: 0 15px;
+        }
+
+        .newsletter-form {
+            flex-direction: column;
+        }
+
+        .newsletter-form input {
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+
+        .newsletter-form button {
+            border-radius: 4px;
+            width: 100%;
+            padding: 10px 0;
+        }
+
+        .social-media-icons {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .toggle-mode {
+            right: 15px;
+        }
+    }
+
+    /* 3D Button Styles */
+    .btn-3d {
+        position: relative;
+        display: inline-block;
+        padding: 6px 12px;
+        color: white;
+        background: linear-gradient(135deg,rgb(80, 4, 28), #1b262c);
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 14px;
+        box-shadow: 0 4px rgb(154, 18, 129), 0 5px 10px rgba(0,0,0,0.2);
+        transition: all 0.1s ease;
+        transform: translateY(0);
+    }
+    .btn-3d:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 0rgb(143, 17, 130), 0 8px 10px rgba(0,0,0,0.3);
+    }
+    .btn-3d:active {
+        transform: translateY(2px);
+        box-shadow: 0 2px 0rgb(109, 4, 83), 0 3px 5px rgba(0,0,0,0.2);
+    }
+    .btn-3d-inner {
+        position: relative;
+        z-index: 1;
+    }
+    .btn-3d::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+        border-radius: 5px;
+    }
+</style>
+
+<section class="footer-section" id="footer">
+    <button class="toggle-mode" id="modeToggle">Toggle Mode</button>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4 quick-links">
+                <style>
+                    .quick-links {
+                        border: 1px solid rgba(255, 255, 255, 0.2);
+                        border-radius: 16px;
+                        padding: 30px 25px;
+                        backdrop-filter: blur(10px);
+                        background: rgba(255, 255, 255, 0.05);
+                        width: 100%;
+                        max-width: 300px;
+                        transition: transform 0.3s ease;
+                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    }
+                    .quick-links:hover {
+                        transform: translateY(-5px);
+                    }
+                    .quick-links h4 {
+                        font-size: 22px;
+                        margin-bottom: 20px;
+                        color: #ffffff;
+                        border-bottom: 2px solid #00bcd4;
+                        display: inline-block;
+                        padding-bottom: 5px;
+                    }
+                    .quick-links ul {
+                        list-style: none;
+                        padding-left: 0;
+                        margin: 0;
+                    }
+                    .quick-links ul li {
+                        margin-bottom: 14px;
+                    }
+                    .quick-links ul li a {
+                        text-decoration: none;
+                        color: #00bcd4;
+                        font-weight: 500;
+                        font-size: 16px;
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+                        transition: color 0.3s ease;
+                    }
+                    .quick-links ul li a i {
+                        margin-right: 10px;
+                        font-size: 16px;
+                        color: #00bcd4;
+                        transition: transform 0.3s ease;
+                    }
+                    .quick-links ul li a::after {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        bottom: -2px;
+                        height: 2px;
+                        width: 0;
+                        background-color: #00bcd4;
+                        transition: width 0.3s ease;
+                    }
+                    .quick-links ul li a:hover {
+                        color: #ffffff;
+                    }
+                    .quick-links ul li a:hover i {
+                        transform: scale(1.2);
+                    }
+                    .quick-links ul li a:hover::after {
+                        width: 100%;
+                    }
+                    @media (max-width: 768px) {
+                        .quick-links {
+                            max-width: 100%;
+                            padding: 20px;
+                        }
+                    }
+                </style>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.php"><i class="fas fa-home"></i>Home</a></li>
+                    <li><a href="about-us.php"><i class="fas fa-user"></i>About</a></li>
+                    <li><a href="products.php"><i class="fas fa-box-open"></i>Products</a></li>
+                    <li><a href="gallery.php"><i class="fas fa-image"></i>Gallery</a></li>
+                    <li><a href="contact-us.php"><i class="fas fa-envelope"></i>Contact</a></li>
+                    <li><a href="faq.php"><i class="fas fa-question-circle"></i>FAQ</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <h4>Newsletter</h4>
+                <p>Subscribe for latest updates and offers.</p>
+                <form class="newsletter-form" action="submit_newsletter.php" method="POST">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <button type="submit"><i class="fa fa-paper-plane"></i></button>
+                </form>
+                <?php
+                if (isset($_GET['subscribed'])) {
+                    $subscribed = $_GET['subscribed'];
+                    if ($subscribed === 'success') {
+                        echo '<p style="color: #4BB543; margin-top: 10px;">Thank you for subscribing to our newsletter!</p>';
+                    } elseif ($subscribed === 'error') {
+                        echo '<p style="color: #FF0000; margin-top: 10px;">Subscription failed. You may already be subscribed.</p>';
+                    } elseif ($subscribed === 'invalid') {
+                        echo '<p style="color: #FF0000; margin-top: 10px;">Invalid email address. Please enter a valid email.</p>';
+                    }
+                }
+                ?>
+                <div class="social-media-icons mt-3">
+                    <a href="https://www.facebook.com/profile.php?id=61573705352585"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/rasmanufac1256"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/sr_plastics71?igsh=MWE3N2o2M3ZmaDlucg%3D%3D"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/sr-plastic-plastic-87a90a317/"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 mb-4">
+                <h4>Contact Us</h4>
+                <ul class="contact-info">
+                    <li>
+                        <span class="icon">??</span>
+                        <a href="https://www.google.com/maps/search/?api=1&query=SR+Plastic,+Industrial+Area,+Patna,+Bihar,+India" target="_blank" style="color:#0072c6; text-decoration:none; font-weight:500;">
+                            SR Plastic, Industrial Area, Patna, Bihar, India
+                        </a>
+                    </li>
+                    <li>
+                        <span class="icon">??</span>
+                        <a href="tel:+919229204553" style="color:#0072c6; text-decoration:none; font-weight:500;">+91 9229204553</a>
+                    </li>
+                    <li>
+                        <span class="icon">??</span>
+                        <a class="email-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@srplastic.com&su=Inquiry&body=Hi%20SR%20Plastic%2C" target="_blank" style="color:#0072c6; text-decoration:none; font-weight:500;">
+                            contact@srplastic.com
+                        </a>
+                    </li>
+                    <li>
+                        <span class="icon">?</span>
+                        Mon-Sat: 9:00 AM - 6:00 PM
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-logo">
+            <a href="index.php">
+                <img src="assets/images/logo/srlogo.png" alt="SR Plastic Logo" class="footer-logo-img">
+            </a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <p>&copy; 2024 SR Plastic. All Rights Reserved.</p>
+            <div class="mt-3" style="max-width: 300px; margin: 0 auto;">
+                <div class="d-flex justify-content-center gap-3">
+                <a href="privacy-policy.php" class="btn-3d">
+                    <span class="btn-3d-inner">Privacy Policy</span>
+                </a>
+                <a href="terms-of-service.php" class="btn-3d">
+                    <span class="btn-3d-inner">Terms of Service</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Force the footer to extend to full viewport width
+        document.querySelectorAll('.footer-section, .footer-bottom').forEach(function(element) {
+            element.style.width = window.innerWidth + 'px';
+        });
+        
+        // Update on window resize
+        window.addEventListener('resize', function() {
+            document.querySelectorAll('.footer-section, .footer-bottom').forEach(function(element) {
+                element.style.width = window.innerWidth + 'px';
+            });
+        });
+        
+        // Theme toggle functionality
+        const modeToggle = document.getElementById('modeToggle');
+        const htmlElement = document.documentElement;
+
+        function setTheme(theme) {
+            htmlElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+        }
+
+        modeToggle.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            setTheme(currentTheme === 'light' ? 'dark' : 'light');
+        });
+
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        setTheme(savedTheme);
+    });
+</script>
